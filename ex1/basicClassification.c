@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-//first file
 //return if an integer is prime
 int isPrime(int numberToCheck) {
     for(int i = 2; i <= sqrt(numberToCheck); i++) {
@@ -28,6 +27,7 @@ int isStrong(int numberToCheck) {
         return 0;
     }
 }
+
 //computing factorial
 int factorial(int number) {
     if(number == 1) {

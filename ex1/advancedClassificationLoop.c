@@ -14,3 +14,31 @@ int isPalindrom(int numberToCheck) {
     }
     return 0;
 }
+
+//checking if a number id armstrong numbet
+int isArmstrong(int numberToCheck) {
+    int numberOfDigits = numOfDigits(numberToCheck);
+    int sum = 0;
+    int number = numberToCheck;
+    int currentDigit;
+    while(number != 0) {
+        currentDigit = number % 10;
+        sum += pow(currentDigit, numberOfDigits);
+    }
+    if(sum == numberToCheck) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+//compute number of digits in muber
+int numberToCheck(int number) {
+    int count = 0;
+    while(number != 0) {
+        count++;
+        number /= 10;
+    }
+    return count;
+}

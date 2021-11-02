@@ -1,3 +1,5 @@
 #include <stdio.h>
 
-int isPalindrom(int numberToCheck)
+int isPalindrom(int numberToCheck) {
+    
+}

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
+//first file
 //return if an integer is prime
 int isPrime(int numberToCheck) {
     for(int i = 2; i <= sqrt(numberToCheck); i++) {

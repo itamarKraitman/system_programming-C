@@ -24,6 +24,9 @@ int isArmstrong(int numberToCheck) {
     while(number != 0) {
         currentDigit = number % 10;
         sum += pow(currentDigit, numberOfDigits);
+        if(sum > number) {
+            return 0;
+        }
     }
     if(sum == numberToCheck) {
         return 1;

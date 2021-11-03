@@ -1,30 +1,32 @@
 #include <stdio.h>
 #include <math.h>
+#define TRUE 1
+#define FALSE 0
 
 //return if an integer is prime
 int isPrime(int numberToCheck) {
     for(int i = 2; i <= sqrt(numberToCheck); i++) {
             if((numberToCheck % i) == 0) {
-                return 0;
+                return FALSE;
          }
     }
-    return 1;
+    return TRUE;
 }
 
 //return if an integer is strong
 int isStrong(int numberToCheck) {
     int sum = 0;
-    int number = numberToCheck
+    int number = numberToCheck;
     while(number > 9) {
         sum += factorial(number % 10);
         number = number / 10;
     }
     sum += factorial(number);
     if(sum == number) {
-        return 1;
+        return TRUE;
     }
     else {
-        return 0;
+        return FALSE;
     }
 }
 

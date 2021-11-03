@@ -1,24 +1,24 @@
 #include <stdio.h>
 #include <math.h>
-//#define TRUE = 1, FALSE = 0
-//does not work!!
+#define TRUE  1
+#define FALSE  0
 
 int isPalindrom(int numberToCheck) {
     int number = numberToCheck;
     int digits = numOfDigits(number);
     if(number < 10) {
-        return 1;
+        return TRUE;
     }
     else if(digits == 2 ) {
         if(number % 10 == number / 10) {
-            return 1;
+            return TRUE;
         }
         else {
-            return 0;
+            return FALSE;
         }
     }
     else if(number / (int) pow(10,digits - 1) != number % 10) {
-        return 0;
+        return FALSE;
     }
     else {
         int toReduce = number - (number / (int) pow(10,digits - 1)); 
@@ -27,26 +27,23 @@ int isPalindrom(int numberToCheck) {
     }
 }
 
-//does not work well
 int isArmstrong(int numberToCheck) {
     int number = numberToCheck;
     int numberOfDigits = numOfDigits(number);
-    int sum = 0;
-    if(number < 10) {
-        return 1;
-    }
-    else if(pow(number % 10, numberOfDigits) > number) {
-        return 0;
+    if(checkArmstrong(number, numberOfDigits) == numberToCheck) {
+        return TRUE;
     }
     else {
-        sum = isArmstrong(number / 10) + pow(number % 10, numberOfDigits)
+        return FALSE;
     }
-    if(sum == numberToCheck) {
-        return 1;
-    }
-    else {
+}
+
+int checkArmstrong(int number, int numberOfDigits) {
+    if (number <= 0) 
+    {
         return 0;
     }
+    return pow(number % 10, numberOfDigits) + checkArmstrong(number / 10, numberOfDigits);
 }
 
 //compute number of digits in muber
@@ -58,6 +55,7 @@ int numOfDigits(int number) {
     }
     return count;
 }
+
 
 
 

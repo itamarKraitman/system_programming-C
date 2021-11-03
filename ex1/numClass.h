@@ -9,6 +9,7 @@ int numberToCheck(int number);
 //recursive
 int isPalindrom(int numberToCheck);
 int numOfDigits(int number);
+int isArmstrong(int numberToCheck)
 
 
 

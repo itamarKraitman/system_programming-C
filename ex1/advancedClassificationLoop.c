@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <math.h>
+#define TRUE 1
+#define FALSE 0
 
 //checking if a number is palindrom
 int isPalindrom(int numberToCheck) {
@@ -10,9 +12,9 @@ int isPalindrom(int numberToCheck) {
         number /= 10;
     }
     if(reversedNumber == numberToCheck) {
-        return 1;
+        return TRUE;
     }
-    return 0;
+    return FALSE;
 }
 
 //checking if a number is armstrong number
@@ -25,14 +27,14 @@ int isArmstrong(int numberToCheck) {
         currentDigit = number % 10;
         sum += pow(currentDigit, numberOfDigits);
         if(sum > number) {
-            return 0;
+            return FALSE;
         }
     }
     if(sum == numberToCheck) {
-        return 1;
+        return TRUE;
     }
     else {
-        return 0;
+        return FALSE;
     }
 }
 

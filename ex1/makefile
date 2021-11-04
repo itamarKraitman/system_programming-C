@@ -38,7 +38,7 @@ for looped
 libclassloops.so: basicClassification.o advancedClassificationLoop.o
 			$(CC) -shared -o libclassloops.so basicClassification.o advancedClassificationLoop.o
 
-PHONY: clean all
+.PHONY: clean all
 
 all: $(PROG)
 clean: rm -f  *.o *.a *.so $(PROG)

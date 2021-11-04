@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #include "numClass.h"
 
 int main() {

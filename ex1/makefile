@@ -41,5 +41,5 @@ libclassloops.so: basicClassification.o advancedClassificationLoop.o
 PHONY: clean all
 
 all: $(PROG) $(LIBS)
-clean: *.o *.a *.so $(PROG)
+clean: rm -f  *.o *.a *.so $(PROG)
 

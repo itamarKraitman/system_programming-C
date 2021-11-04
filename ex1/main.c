@@ -4,14 +4,14 @@
 int main() {
     int firstNumber, secondNumber;
     scanf("%d%d",&firstNumber, &secondNumber);
-    if (firstNumber == secondNumber)
-    {
-        printf("%d ",isPrime(firstNumber));
-        printf("%d ",isArmstrong(firstNumber));
-        printf("%d ",isStrong(firstNumber));
-        printf("%d ",isPalindrom(firstNumber));
-    }
-    else if (firstNumber > secondNumber) {
+    //if (firstNumber == secondNumber)
+    //{
+      //  printf("%d ",isPrime(firstNumber));
+        //printf("%d ",isArmstrong(firstNumber));
+        //printf("%d ",isStrong(firstNumber));
+        //printf("%d ",isPalindrom(firstNumber));
+    //}
+    if (firstNumber > secondNumber) {
         //armstrong
         for (int i = secondNumber; i <= firstNumber; i++)
         {

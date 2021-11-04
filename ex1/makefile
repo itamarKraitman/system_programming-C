@@ -4,32 +4,28 @@ CC = gcc
 FLAGS = -wall -g
 AR = ar
 
-
 loops: libclassloops.a
-	$(CC) $(FLAGS) -o loops libclassloops.a
 recursives: libclassrec.a
-	$(CC) $(FLAGS) -o recursives libclassrec.a
 recursived: libclassrec.so
-	$(CC) $(FLAGS) -o recursived libclassloops.so
 loopd: libclassloops.so
-	$(CC) $(FLAGS) -o loopd libclassloops.so
+
 mains: main.o libclassrec.a
-	$(CC) -o mains main.o -L -libclassrec.a
+	$(CC) $(FLAGS) -o mains main.o libclassrec.a -lm
 maindloop: main.o libclassloops.so
-	$(CC) -o maindloop main.o -L libclassloops.so
+	$(CC) $(FLAGS) -o maindloop main.o ./libclassloops.so -lm
 maindrec: main.o libclassrec.so
-	$(CC) -o maindrec main.o -L libclassrec.so
+	$(CC) $(FLAGS) -o maindrec main.o ./libclassrec.so -lm
 
 #for mains
-main.o: main.c
-	$(CC) -c main.c
+main.o: main.c numClass.h
+	$(CC)$(FLAGS) -c main.c
 #for loops
 libclassloops.a: basicClassification.o advancedClassificationLoop.o
 			$(AR) -rcs libclassloops.a basicClassification.o advancedClassificationLoop.o
 basicClassification.o:  basicClassification.c numClass.h
-			$(CC) -c basicClassification.c
+			$(CC) $(FLAGS) -c basicClassification.c
 advancedClassificationLoop.o: advancedClassificationLoop.c numClass.h
-			$(CC) -c advancedClassificationLoop.c
+			$(CC) $(FLAGS) -c advancedClassificationLoop.c -lm
 #for recursives
 libclassrec.a: basicClassification.o advancedClassificationRecursion.o
 			$(AR) -rcs libclassrec.a basicClassification.o advancedClassificationRecursion.o

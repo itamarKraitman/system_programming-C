@@ -13,88 +13,89 @@ int main() {
     //}
     if (firstNumber > secondNumber) {
         //armstrong
+        printf("The Armstrong numbers are:");
         for (int i = secondNumber; i <= firstNumber; i++)
         {
-            printf("The Armstrong numbers are: ");
             if (isArmstrong(i))
             {
-                printf("%d ",i);
+                printf(" %d",i);
             }     
         }
          printf("\n");
         //palindrom
+        printf("The Palindromes are:");
         for (int i = secondNumber; i <= firstNumber; i++)
-        {
-            printf("The Palindromes are: ");
+        {  
             if (isPalindrom(i))
             {
-                printf("%d ",i);
+                printf(" %d",i);
             }
         }
          printf("\n");
         //prime
+        printf("The Prime numbers are:");
         for (int i = secondNumber; i <= firstNumber; i++)
         {
-            printf("The Prime numbers are: ");
             if (isPrime(i))
             {
-                printf("%d ",i);
+                printf(" %d",i);
             }
             
         }
         printf("\n");
         //strong
+        printf("The Strong numbers are:");
         for (int i = secondNumber; i <= firstNumber; i++)
         {
-            printf("The Strong numbers are: ");
             if (isStrong(i))
             {
-                printf("%d ",i);
+                printf(" %d",i);
             }
         }
         printf("\n");
     }
     else {
         //armstrong
+        printf("The Armstrong numbers are:");
         for (int i = firstNumber; i <= secondNumber; i++)
         {
-            printf("The Armstrong numbers are: \n");
             if (isArmstrong(i))
             {
-                printf("%d ",i);
+                printf(" %d",i);
             }
         }
          printf("\n");
         //palindrom
+        printf("The Palindromes are:");
         for (int i = firstNumber; i <= secondNumber; i++)
-        {
-            printf("The Palindromes are: \n");
+        {           
             if (isPalindrom(i))
             {
-                printf("%d ",i);
+                printf(" %d",i);
             }
         }
          printf("\n");
         //prime
+        printf("The Prime numbers are:");
         for (int i = firstNumber; i <= secondNumber; i++)
         {
-            printf("The Prime numbers are: \n");
             if (isPrime(i))
             {
-                printf("%d ",i);
+                printf(" %d",i);
             }
             
         }
          printf("\n");
         //strong
+        printf("The Strong numbers are:");
         for (int i = firstNumber; i <= secondNumber; i++)
         {
-            printf("The Strong numbers are: \n");
             if (isStrong(i))
             {
-                printf("%d ",i);
+                printf(" %d",i);
             }
         }
-         printf("\n");
     }
+    printf("\n");
+    return 0;
 }

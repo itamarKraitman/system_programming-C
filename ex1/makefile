@@ -1,7 +1,7 @@
 PROG = loops recursives recursived looped mains maindloop maindrec
 LIBS = libclassloops.a libclassrec.a libclassrec.so libclassloops.so
 CC = gcc
-FLAGS = -wall -g
+FLAGS = -Wall -g
 AR = ar
 
 loops: libclassloops.a

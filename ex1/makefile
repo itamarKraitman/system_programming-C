@@ -18,7 +18,7 @@ maindrec: main.o libclassrec.so
 
 #for mains
 main.o: main.c numClass.h
-	$(CC)$(FLAGS) -c main.c
+	$(CC) $(FLAGS) -c main.c
 #for loops
 libclassloops.a: basicClassification.o advancedClassificationLoop.o
 			$(AR) -rcs libclassloops.a basicClassification.o advancedClassificationLoop.o

@@ -33,10 +33,10 @@ int isStrong(int numberToCheck) {
 
 //computing factorial
 int factorial(int number) {
-    if(number == 1) {
+    if(number <= 1) {
         return 1;
     }
-    return  factorial(number - 1) * number;
+    return  number*factorial(number - 1);
 }
 
 

@@ -1,4 +1,4 @@
-PROG = loops recursives recursived looped mains maindloop maindrec
+PROG = loops recursives recursived loopd mains maindloop maindrec
 LIBS = libclassloops.a libclassrec.a libclassrec.so libclassloops.so
 CC = gcc
 FLAGS = -Wall -g

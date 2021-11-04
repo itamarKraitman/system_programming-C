@@ -15,7 +15,7 @@ int main() {
         //armstrong
         for (int i = secondNumber; i <= firstNumber; i++)
         {
-            printf("The Armstrong numbers are: ");
+            printf("The Armstrong numbers are:");
             if (isArmstrong(i))
             {
                 printf("%d",i);
@@ -25,7 +25,7 @@ int main() {
         //palindrom
         for (int i = secondNumber; i <= firstNumber; i++)
         {
-            printf("The Palindromes are: ");
+            printf("The Palindromes are:");
             if (isPalindrom(i))
             {
                 printf("%d",i);
@@ -34,7 +34,7 @@ int main() {
         //prime
         for (int i = secondNumber; i <= firstNumber; i++)
         {
-            printf("The Prime numbers are: ");
+            printf("The Prime numbers are:");
             if (isPrime(i))
             {
                 printf("%d",i);
@@ -44,7 +44,7 @@ int main() {
         //strong
         for (int i = secondNumber; i <= firstNumber; i++)
         {
-            printf("The Strong numbers are: ");
+            printf("The Strong numbers are:");
             if (isStrong(i))
             {
                 printf("%d",i);
@@ -55,7 +55,7 @@ int main() {
         //armstrong
         for (int i = firstNumber; i <= secondNumber; i++)
         {
-            printf("The Armstrong numbers are: ");
+            printf("The Armstrong numbers are:");
             if (isArmstrong(i))
             {
                 printf("%d",i);
@@ -64,7 +64,7 @@ int main() {
         //palindrom
         for (int i = firstNumber; i <= secondNumber; i++)
         {
-            printf("The Palindromes are: ");
+            printf("The Palindromes are:");
             if (isPalindrom(i))
             {
                 printf("%d",i);
@@ -73,7 +73,7 @@ int main() {
         //prime
         for (int i = firstNumber; i <= secondNumber; i++)
         {
-            printf("The Prime numbers are: ");
+            printf("The Prime numbers are:");
             if (isPrime(i))
             {
                 printf("%d",i);
@@ -84,7 +84,7 @@ int main() {
         //strong
         for (int i = firstNumber; i <= secondNumber; i++)
         {
-            printf("The Strong numbers are: ")
+            printf("The Strong numbers are:");
             if (isStrong(i))
             {
                 printf("%d",i);

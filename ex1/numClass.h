@@ -10,7 +10,7 @@ int numberToCheck(int number);
 int isPalindrom(int numberToCheck);
 int numOfDigits(int number);
 int isArmstrong(int numberToCheck);
-int checkArmstrong(int number, int numberOfDigits)
+int checkArmstrong(int number, int numberOfDigits);
 
 
 

@@ -9,7 +9,7 @@ int main()
     {
         int temp = firstNumber;
         firstNumber = secondNumber;
-        secondNumber = firstNumber;
+        secondNumber = temp;
     }
     //armstrong
     printf("The Armstrong numbers are:");

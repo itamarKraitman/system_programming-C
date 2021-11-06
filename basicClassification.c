@@ -18,12 +18,17 @@ int isPrime(int numberToCheck) {
 int isStrong(int numberToCheck) {
     int sum = 0;
     int number = numberToCheck;
-    while(number > 9) {
-        sum += factorial(number % 10);
+    while(number != 0) {
+        if (number == 1)
+        {
+            sum += 1;
+        }
+        else { 
+            sum += factorial(number % 10);
+        }
         number = number / 10;
     }
-    sum += factorial(number);
-    if(sum == number) {
+    if (sum == numberToCheck) {
         return TRUE;
     }
     else {

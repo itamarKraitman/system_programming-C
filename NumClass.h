@@ -11,6 +11,8 @@ int numberToCheck(int number);
 int numOfDigits(int number);
 //int isArmstrong(int numberToCheck);
 int checkArmstrong(int number, int numberOfDigits);
+int CheckPalindrome(int number);
+int reverse(int number);
 
 
 

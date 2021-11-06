@@ -4,28 +4,36 @@
 #define TRUE  1
 #define FALSE  0
 
-int isPalindrom(int numberToCheck) {
+int isPalindrom(int numberToCheck)
+{
     int number = numberToCheck;
-    int digits = numOfDigits(number);
-    if(number < 10) {
-        return TRUE;
+    if(CheckPalindrome(number) == TRUE)
+    {
+       return TRUE;
     }
-    else if(digits == 2 ) {
-        if(number % 10 == number / 10) {
-            return TRUE;
-        }
-        else {
-            return FALSE;
-        }
-    }
-    else if(number / (int) pow(10,digits - 1) != number % 10) {
+    else
+    {
         return FALSE;
     }
-    else {
-        int toReduce = number - (number / (int) pow(10,digits - 1)); 
-        int newNumberToCheck = toReduce % 10;
-        isPalindrom(newNumberToCheck);
+}
+
+int CheckPalindrome(int number)
+{
+    if(number == reverse(number))
+    {
+        return TRUE;
     }
+    
+    return FALSE;
+}
+
+int reverse(int number)
+{
+    int digit = (int)log10(number);
+    if(number == 0)
+        return FALSE;
+
+    return ((number%10 * pow(10, digit)) + reverse(number/10));
 }
 
 int isArmstrong(int numberToCheck) {
